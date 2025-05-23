@@ -1,6 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -97,5 +100,65 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/* Custom prose styles for content sections */
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4 text-slate-900;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mt-6 mb-3 text-slate-900;
+}
+
+.prose p {
+  @apply leading-relaxed mb-5 text-slate-700;
+}
+
+.prose ul, .prose ol {
+  @apply ml-7 mb-5 text-slate-700;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose strong {
+  @apply font-bold text-slate-900;
+}
+
+.prose em {
+  @apply italic;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-slate-300 pl-5 my-5 italic text-slate-600;
+}
+
+.prose code {
+  @apply bg-slate-100 px-2 py-1 rounded text-sm font-mono text-slate-900 border border-slate-200;
+}
+
+.prose pre {
+  @apply bg-slate-900 text-slate-100 p-5 rounded-lg overflow-x-auto my-5 shadow-lg;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-inherit border-none;
+}
+
+.prose a {
+  @apply text-indigo-600 no-underline font-medium border-b border-blue-200 hover:text-indigo-800 hover:border-indigo-800 transition-colors;
 }
